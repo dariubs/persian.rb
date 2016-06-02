@@ -8,9 +8,9 @@ require 'persian/version'
 Gem::Specification.new do |s|
   s.name        = 'persian'
   s.version     = Persian::VERSION
-  s.date        = '2015-09-03'
-  s.summary     = "Persian language set of utilities."
-  s.description = ""
+  s.date        = '2016-06-02'
+  s.summary     = "A set of utilities for Persian language."
+  s.description = "A set of utilities for Persian language."
   s.authors     = ["Dariush Abbasi"]
   s.email       = 'poshtehani@gmail.com'
   s.files       = ["lib/persian.rb", "lib/persian/version.rb"]
