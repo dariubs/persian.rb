@@ -1,10 +1,25 @@
-Persian
-=====
-[![Build Status](https://travis-ci.org/goonia/persian.svg?branch=master)](https://travis-ci.org/goonia/persian) [![Ruby Gems](https://img.shields.io/badge/gem-persian-orange.svg)](https://rubygems.org/gems/persian)
+<p align="center">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Farsi.svg"
+         height="130" alt="Persian">
+</p>
+<p align="center">
+    <a href="https://travis-ci.org/goonia/persian">
+        <img src="https://travis-ci.org/goonia/persian.svg?branch=master"
+             alt="Build Status">
+    </a>
+    <a href="https://rubygems.org/gems/persian">
+        <img src="https://img.shields.io/badge/gem-persian-orange.svg"
+             alt="Ruby Gems">
+    </a>
 
-Description
------------
-A set of utilities for Persian text.
+    <a href="https://rubygems.org/gems/persian">
+        <img src="https://img.shields.io/gem/dv/persian/stable.svg?maxAge=2592000"
+             alt="Ruby Gems downloads">
+    </a>
+</p>
+<p align="center"><sup><strong> Ruby gem for working with Persian text. </strong></sup></p>
+
+
 
 Install
 -----
