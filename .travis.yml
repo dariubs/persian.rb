@@ -3,7 +3,6 @@ rvm:
   - 2.2.5
   - 2.3.1
   - ruby-head
-  - jruby
   - rbx-2
 
 script:
