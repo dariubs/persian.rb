@@ -1,3 +1,5 @@
+# -*- coding: UTF-8 -*-
+
 class Persian
   @english_persian_numbers = {
     # english numbers
