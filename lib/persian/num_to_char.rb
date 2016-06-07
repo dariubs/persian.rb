@@ -47,6 +47,10 @@ class Persian
           current_split = num.to_s[0..(num.to_s.length%3 - 1).to_i]
           more_split = num.to_s.sub(current_split, "")
           words += num_to_char(current_split) + " " + @longscale[(num.to_s.length / 3)] + num_to_char(more_split, true)
+        else
+          current_split = num.to_s[0..2]
+          more_split = num.to_s.sub(current_split, "")
+          words += num_to_char(current_split) + " " + @longscale[(num.to_s.length / 3)-1] + num_to_char(more_split, true)
         end
       end
 
