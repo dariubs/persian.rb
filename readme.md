@@ -41,6 +41,10 @@ Persian.number("۱۰۰۰", { lang: "en", return: "int" }) # output: 1000
 
 Persian.character("ملوك") # output: "ملوک"
 
+Persian.num_to_char 12345 # output : "دوازده هزار و سیصد و چهل و پنج"
+Persian.num_to_char "۲۰۴۸۲۰۴۸۲۰۴۸" # output: "دویست و چهار میلیارد و هشتصد و بیست میلیون و چهارصد و هشتاد و دو هزار و چهل و هشت"
+
+
 ```
 
 License

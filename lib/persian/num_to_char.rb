@@ -3,7 +3,7 @@
 class Persian
   def self.num_to_char num, inner = false
 
-    if num.is_a? String
+    if num.kind_of? String
       num = Persian.number(num, {lang: "en", return: "int"})
     end
 
