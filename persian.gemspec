@@ -19,5 +19,5 @@ Gem::Specification.new do |s|
     'http://github.com/goonia/persian'
   s.license       = 'MIT'
 
-  s.add_development_dependency "rspec", "=> 3.4.0"
+  s.add_development_dependency "rspec", "~> 3.4.0"
 end
