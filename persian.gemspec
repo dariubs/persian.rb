@@ -13,11 +13,11 @@ Gem::Specification.new do |s|
   s.description = "A set of utilities for Persian language."
   s.authors     = ["Dariush Abbasi"]
   s.email       = 'poshtehani@gmail.com'
-  s.files       = ["lib/persian.rb", "lib/persian/number.rb", "lib/persian/character.rb","lib/persian/list/number.rb", "lib/persian/num_to_char.rb", "lib/persian/version.rb"]
+  s.files       = ["lib/persian.rb", "lib/persian/number.rb", "lib/persian/character.rb","lib/persian/list/number.rb", "lib/persian/list/character.rb", "lib/persian/num_to_char.rb", "lib/persian/version.rb"]
   s.require_paths = ["lib"]
   s.homepage    =
     'http://github.com/goonia/persian'
   s.license       = 'MIT'
 
-  s.add_development_dependency "rspec", "~> 3.4.0"
+  s.add_development_dependency "rspec", "=> 3.4.0"
 end

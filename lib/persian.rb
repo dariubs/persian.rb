@@ -6,6 +6,7 @@ require "persian/num_to_char"
 
 #lists
 require "persian/list/number"
+require "persian/list/character"
 
 class Persian
 
