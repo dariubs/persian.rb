@@ -2,7 +2,7 @@
 
 class Persian
 
-  def self.number num, opts = {:lang => "fa", :return => "string", :seprate => false }
+  def self.number num, opts = {:lang => "fa", :return => "string"}
 
     if opts[:lang] == nil
       opts[:lang] = "fa"
@@ -10,10 +10,6 @@ class Persian
 
     if opts[:return] == nil
       opts[:return] = "string"
-    end
-
-    if opts[:seprate] == nil
-      opts[:seprate] = false
     end
 
     if num.is_a? Numeric
@@ -33,15 +29,17 @@ class Persian
     }
 
     if opts[:return] == "string"
-      if opts[:seprate]
-        num = num.reverse.gsub(/(\S{3})(?=\S)/, '\\1,').reverse
-      end
       return num
     elsif opts[:return] == "int"
       return num.to_i
     else
       return num
     end
+  end
+
+  def self.number_with_colon num
+    num = self.number(num)
+    num = num.reverse.gsub(/(\S{3})(?=\S)/, '\\1,').reverse
   end
 
 end
