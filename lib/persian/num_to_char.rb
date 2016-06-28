@@ -1,11 +1,9 @@
 # -*- coding: UTF-8 -*-
 
+# Persian class
 class Persian
-  def self.num_to_char num, inner = false
-
-    if num.kind_of? String
-      num = Persian.number(num, {lang: 'en', return: 'int'})
-    end
+  def self.num_to_char(num, inner = false)
+    num = Persian.number(num, lang: 'en', return: 'int') if num.is_a? String
 
     words = ''
 
@@ -24,35 +22,28 @@ class Persian
       elsif num < 20
         words += @teens[num - 10]
       elsif num < 100
-        if inner
-          words += ' و '
-        end
+        words += ' و ' if inner
 
-        words += @decimal[num/10] + num_to_char(num%10, true)
+        words += @decimal[num / 10] + num_to_char(num % 10, true)
       else
-        if inner
-          words += ' و '
-        end
+        words += ' و ' if inner
 
-        words += @hundreds[num/100] + num_to_char(num%100, true)
+        words += @hundreds[num / 100] + num_to_char(num % 100, true)
       end
     else
-      if inner
-        words += ' و '
-      end
+      words += ' و ' if inner
 
-      if (num.to_s.length%3) != 0
-        current_split = num.to_s[0..(num.to_s.length%3 - 1).to_i]
+      if (num.to_s.length % 3) != 0
+        current_split = num.to_s[0..(num.to_s.length % 3 - 1).to_i]
         more_split = num.to_s.sub(current_split, '')
         words += num_to_char(current_split) + ' ' + @longscale[(num.to_s.length / 3)] + num_to_char(more_split, true)
       else
         current_split = num.to_s[0..2]
         more_split = num.to_s.sub(current_split, '')
-        words += num_to_char(current_split) + ' ' + @longscale[(num.to_s.length / 3)-1] + num_to_char(more_split, true)
+        words += num_to_char(current_split) + ' ' + @longscale[(num.to_s.length / 3) - 1] + num_to_char(more_split, true)
       end
     end
 
     words
-
   end
 end

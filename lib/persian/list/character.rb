@@ -1,5 +1,6 @@
 # -*- coding: UTF-8 -*-
 
+# Persian class
 class Persian
   @arabic_to_persian_chars = {
     'ك' => 'ک',

@@ -1,5 +1,6 @@
 # -*- coding: UTF-8 -*-
 
+# Persian class
 class Persian
   @english_persian_numbers = {
     # english numbers
@@ -12,7 +13,7 @@ class Persian
     '6' => '۶',
     '7' => '۷',
     '8' => '۸',
-    '9' => '۹',
+    '9' => '۹'
   }
 
   @persian_english_numbers = {
@@ -26,11 +27,11 @@ class Persian
     '۶' => '6',
     '۷' => '7',
     '۸' => '8',
-    '۹' => '9',
+    '۹' => '9'
   }
 
   @arabic_persian_numbers = {
-    #arabic numbers
+    # arabic numbers
     '٠' => '۰',
     '١' => '۱',
     '٢' => '۲',
@@ -40,11 +41,11 @@ class Persian
     '٦' => '۶',
     '٧' => '۷',
     '٨' => '۸',
-    '٩' => '۹',
+    '٩' => '۹'
   }
 
   @persian_arabic_numbers = {
-    #arabic numbers
+    # arabic numbers
     '۰' => '٠',
     '۱' => '١',
     '۲' => '٢',
@@ -54,7 +55,7 @@ class Persian
     '۶' => '٦',
     '۷' => '٧',
     '۸' => '٨',
-    '۹' => '٩',
+    '۹' => '٩'
   }
 
   @arabic_english_numbers = {
@@ -159,5 +160,4 @@ class Persian
     'دسیلیون',
     'دسیلیارد'
   ]
-
 end

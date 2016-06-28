@@ -1,0 +1,23 @@
+Metrics/LineLength:
+  Max: 160
+
+Metrics/MethodLength:
+  Max: 75
+
+Metrics/ClassLength:
+  Max: 2000
+
+Metrics/AbcSize:
+  Max: 69
+
+Metrics/CyclomaticComplexity:
+  Max: 14
+
+Metrics/PerceivedComplexity:
+  Max: 18
+
+Style/BracesAroundHashParameters:
+  EnforcedStyle: context_dependent
+
+Style/WordArray:
+  EnforcedStyle: brackets

@@ -17,14 +17,20 @@ class Persian
 
     nums.each { |k, v| num.gsub!(k, v) }
 
-    if opts[:return] == 'string' then return num
-    elsif opts[:return] == 'int' then return num.to_i
-    else return num end
+    if opts[:return]
+      case opts[:return]
+      when 'string'
+        num
+      when 'int'
+        num.to_i
+      end
+    else
+      num
+    end
   end
 
-  def self.number_with_colon num
-    num = self.number(num)
-    num = num.reverse.gsub(/(\S{3})(?=\S)/, '\\1,').reverse
+  def self.number_with_colon(num)
+    num = number(num)
+    num.reverse.gsub(/(\S{3})(?=\S)/, '\\1,').reverse
   end
-
 end

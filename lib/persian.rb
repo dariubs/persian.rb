@@ -8,5 +8,6 @@ require 'persian/num_to_char'
 require 'persian/list/number'
 require 'persian/list/character'
 
+# Persian class
 class Persian
 end
