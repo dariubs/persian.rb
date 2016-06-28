@@ -8,4 +8,8 @@ describe 'persian character' do
     expect(Persian.character('ملوك')).to eq('ملوک')
   end
 
+  it 'should remove redundent spaces in strings' do
+    expect(Persian.remove_extra_spaces('سلام من به تو یار                          قدیمی')).to eq('سلام من به تو یار قدیمی')
+  end
+
 end

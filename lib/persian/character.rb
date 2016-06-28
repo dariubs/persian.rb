@@ -7,4 +7,8 @@ class Persian
 
     char
   end
+
+  def self.remove_extra_spaces(char)
+    char.split.join(" ")
+  end
 end
