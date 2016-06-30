@@ -10,4 +10,8 @@ describe 'persian character' do
   it 'should remove redundent spaces in strings' do
     expect(Persian.remove_extra_spaces('سلام من به تو یار                          قدیمی')).to eq('سلام من به تو یار قدیمی')
   end
+
+  it 'should remove all arabic harekats from strings' do
+    expect(Persian.remove_harekats('مَتَی ما تَلْقَ مَنْ تَهْوَی دَعِ الدُّنیا وأهْْمِلْها')).to eq('متی ما تلق من تهوی دع الدنیا وأهملها')
+  end
 end

@@ -10,4 +10,9 @@ class Persian
   def self.remove_extra_spaces(char)
     char.split.join(' ')
   end
+
+  def self.remove_harekats(char)
+    @harekats.each { |v| char.gsub!(v, '') }
+    char
+  end
 end

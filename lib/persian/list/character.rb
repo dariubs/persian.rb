@@ -15,4 +15,15 @@ class Persian
     'ة' => 'ه',
     'هٔ' => 'ه'
   }
+
+  @harekats = [
+    'َ', # Ae
+    'ِ', # E
+    'ُ', # O
+    'ً', # An
+    'ٍ', # En
+    'ٌ', # On
+    'ْ', # Saken
+    'ّ' # Tashdid
+  ]
 end
