@@ -14,4 +14,11 @@ describe 'persian character' do
   it 'should remove all arabic harekats from strings' do
     expect(Persian.remove_harekats('مَتَی ما تَلْقَ مَنْ تَهْوَی دَعِ الدُّنیا وأهْْمِلْها')).to eq('متی ما تلق من تهوی دع الدنیا وأهملها')
   end
+
+  it 'should replace [ & ], { & }, ( & ), " & " with « & »' do
+    expect(Persian.general_brackets('اگر اراده ای نباشد عشقی نیست. "گاندی"')).to eq('اگر اراده ای نباشد عشقی نیست. «گاندی»')
+    expect(Persian.general_brackets('اگر اراده ای نباشد عشقی نیست. [گاندی]')).to eq('اگر اراده ای نباشد عشقی نیست. «گاندی»')
+    expect(Persian.general_brackets('اگر اراده ای نباشد عشقی نیست. (گاندی)')).to eq('اگر اراده ای نباشد عشقی نیست. «گاندی»')
+    expect(Persian.general_brackets('اگر اراده ای نباشد عشقی نیست. {گاندی}')).to eq('اگر اراده ای نباشد عشقی نیست. «گاندی»')
+  end
 end

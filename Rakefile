@@ -33,5 +33,5 @@ task :doc do
 end
 
 desc 'Build and install gem'
-task default: [:test, :buildgem, :installgem] do
+task default: [:buildgem, :installgem] do
 end

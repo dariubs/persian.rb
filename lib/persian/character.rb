@@ -18,4 +18,14 @@ class Persian
     @harekats.each { |v| char.gsub!(v, '') }
     char
   end
+
+  # Replace general brackets with one type brackets
+  # Default: 	0xAB & 	0xBB
+  def self.general_brackets(char)
+    char.gsub!(/"(.*?)"/, '«\1»')
+    char.gsub!(/\[(.*?)\]/, '«\1»')
+    char.gsub!(/\{(.*?)\}/, '«\1»')
+    char.gsub!(/\((.*?)\)/, '«\1»')
+    char
+  end
 end
