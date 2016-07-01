@@ -16,6 +16,11 @@
         <img src="https://img.shields.io/gem/dv/persian/stable.svg?maxAge=2592000"
              alt="Ruby Gems downloads">
     </a>
+
+    <a href="https://codeclimate.com/github/goonia/persian">
+        <img src="https://codeclimate.com/github/goonia/persian/badges/gpa.svg"
+             alt="Code Climate">
+    </a>
 </p>
 <p align="center"><sup><strong> Ruby gem for working with Persian text. </strong></sup></p>
 
