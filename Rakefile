@@ -27,6 +27,11 @@ desc 'Run code tests'
 task test: [:rspec, :rubocop] do
 end
 
+desc 'Generate docs'
+task :doc do
+  sh('yard doc')
+end
+
 desc 'Build and install gem'
-task default: [:buildgem, :installgem] do
+task default: [:test, :buildgem, :installgem] do
 end
