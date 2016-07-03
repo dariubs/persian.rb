@@ -10,7 +10,9 @@ class Persian
 
   # Remove extra spaces in text
   def self.remove_extra_spaces(char)
-    char.split.join(' ')
+    char = char.split.join(' ')
+    char = char.split('‌').join('‌')
+    char
   end
 
   # Remove Arabic harecats from text
