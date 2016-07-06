@@ -8,6 +8,6 @@ require 'persian/num_to_char'
 require 'persian/list/number'
 require 'persian/list/character'
 
-# Persian class
+# Public: This is the main class of Persian.
 class Persian
 end

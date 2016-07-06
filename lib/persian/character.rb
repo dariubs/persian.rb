@@ -23,11 +23,11 @@ class Persian
 
   # Replace general brackets with one type brackets
   # Default: 	0xAB & 	0xBB
-  def self.general_brackets(char)
-    char.gsub!(/"(.*?)"/, '«\1»')
-    char.gsub!(/\[(.*?)\]/, '«\1»')
-    char.gsub!(/\{(.*?)\}/, '«\1»')
-    char.gsub!(/\((.*?)\)/, '«\1»')
+  def self.general_brackets(char, left = '«', right = '»')
+    char.gsub!(/"(.*?)"/, left + '\1' + right)
+    char.gsub!(/\[(.*?)\]/, left + '\1' + right)
+    char.gsub!(/\{(.*?)\}/, left + '\1' + right)
+    char.gsub!(/\((.*?)\)/, left + '\1' + right)
     char
   end
 end

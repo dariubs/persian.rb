@@ -21,4 +21,8 @@ describe 'persian character' do
     expect(Persian.general_brackets('اگر اراده ای نباشد عشقی نیست. (گاندی)')).to eq('اگر اراده ای نباشد عشقی نیست. «گاندی»')
     expect(Persian.general_brackets('اگر اراده ای نباشد عشقی نیست. {گاندی}')).to eq('اگر اراده ای نباشد عشقی نیست. «گاندی»')
   end
+
+  it 'should replace "&" with ( & )' do
+    expect(Persian.general_brackets('اگر اراده ای نباشد عشقی نیست. "گاندی"', '(', ')')).to eq('اگر اراده ای نباشد عشقی نیست. (گاندی)')
+  end
 end
