@@ -25,4 +25,10 @@ describe 'persian character' do
   it 'should replace "&" with ( & )' do
     expect(Persian.general_brackets('اگر اراده ای نباشد عشقی نیست. "گاندی"', '(', ')')).to eq('اگر اراده ای نباشد عشقی نیست. (گاندی)')
   end
+
+  it 'should add ی after names that ends with ا, و, ه' do
+    expect(Persian.fix_y_after_vowel('داریوش')).to eq('داریوش')
+    expect(Persian.fix_y_after_vowel('حیفا')).to eq('حیفا‌ی')
+    expect(Persian.fix_y_after_vowel('الهه')).to eq('الهه‌ی')
+  end
 end

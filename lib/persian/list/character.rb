@@ -26,4 +26,10 @@ class Persian
     'ْ', # Saken
     'ّ' # Tashdid
   ]
+
+  @end_vowel = [
+    'ه',
+    'ا',
+    'و'
+  ]
 end

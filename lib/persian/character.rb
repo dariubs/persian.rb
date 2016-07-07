@@ -30,4 +30,9 @@ class Persian
     char.gsub!(/\((.*?)\)/, left + '\1' + right)
     char
   end
+
+  def self.fix_y_after_vowel(char)
+    char += '‌ی' if @end_vowel.include? char[-1]
+    char
+  end
 end
