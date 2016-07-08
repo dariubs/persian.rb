@@ -31,4 +31,12 @@ describe 'persian character' do
     expect(Persian.fix_y_after_vowel('حیفا')).to eq('حیفا‌ی')
     expect(Persian.fix_y_after_vowel('الهه')).to eq('الهه‌ی')
   end
+
+  it 'should replace english characters with it\'s same key persian characters on keyboard' do
+    expect(Persian.english_to_persian_char(';ajd k,p')).to eq('کشتی نوح')
+  end
+
+  it 'should replace persian characters with it\'s same key english characters on keyboard' do
+    expect(Persian.persian_to_english_char('لخخلمث.زخپ')).to eq('google.com')
+  end
 end

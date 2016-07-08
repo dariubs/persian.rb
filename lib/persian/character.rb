@@ -31,6 +31,16 @@ class Persian
     char
   end
 
+  def self.english_to_persian_char(char)
+    @english_to_persian_keyboard_chars.each { |k, v| char.gsub!(k, v) }
+    char
+  end
+
+  def self.persian_to_english_char(char)
+    @english_to_persian_keyboard_chars.each { |v, k| char.gsub!(k, v) }
+    char
+  end
+
   def self.fix_y_after_vowel(char)
     char += '‌ی' if @end_vowel.include? char[-1]
     char
