@@ -31,16 +31,21 @@ class Persian
     char
   end
 
+  # Replace english characters with it's key persian value on standard persian keyboard
+  # For now just support QWERTY keyboard
   def self.english_to_persian_char(char)
     @english_to_persian_keyboard_chars.each { |k, v| char.gsub!(k, v) }
     char
   end
 
+  # Replace standard persian keyboard characters with it's key persian value on english keyboard
+  # For now just support QWERTY keyboard
   def self.persian_to_english_char(char)
     @english_to_persian_keyboard_chars.each { |v, k| char.gsub!(k, v) }
     char
   end
 
+  # Add '‌ی' after names that end with ه, ا, و
   def self.fix_y_after_vowel(char)
     char += '‌ی' if @end_vowel.include? char[-1]
     char
