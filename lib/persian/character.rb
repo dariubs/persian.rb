@@ -50,4 +50,11 @@ class Persian
     char += '‌ی' if @end_vowel.include? char[-1]
     char
   end
+
+  # Split paragraphs
+  # Return an array of paragraphs
+  def self.paragraph(char)
+    para = char.split("\n").reject(&:empty?)
+    para
+  end
 end

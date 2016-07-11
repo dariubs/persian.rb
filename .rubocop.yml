@@ -1,5 +1,5 @@
 Metrics/LineLength:
-  Max: 160
+  Max: 300
 
 Metrics/MethodLength:
   Max: 75
@@ -21,3 +21,6 @@ Style/BracesAroundHashParameters:
 
 Style/WordArray:
   EnforcedStyle: brackets
+
+Style/AsciiComments:
+  Enabled: false
