@@ -61,4 +61,15 @@ describe 'persian character' do
     expect(Persian.replace_zwnj_mi(mi_before)).to eq(mi_after)
     expect(Persian.replace_zwnj_mi(nmi_before)).to eq(nmi_after)
   end
+
+  it 'should Resplace ست with \sاست if lastest character before \s is ا' do
+    first_before = 'امروز، فردا است.'
+    first_after = 'امروز، فرداست.'
+
+    second_before = 'نام او علی است.'
+    second_after = 'نام او علی است.'
+
+    expect(Persian.ast(first_before)).to eq(first_after)
+    expect(Persian.ast(second_before)).to eq(second_after)
+  end
 end

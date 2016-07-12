@@ -65,4 +65,14 @@ class Persian
     char.gsub!(/(^|\s)(#{mi}|#{nmi})\s(\S+)/, '\1\2‌\3')
     char
   end
+
+  # Resplace ست with \sاست if lastest character before \s is ا
+  def self.ast(char)
+    a = 'ا'
+    ast = 'است'
+    st = 'ست'
+
+    char.gsub!(/(#{a})\s(#{ast})/, '\1' + st)
+    char
+  end
 end
