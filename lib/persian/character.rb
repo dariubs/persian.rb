@@ -57,4 +57,12 @@ class Persian
     para = char.split("\n").reject(&:empty?)
     para
   end
+
+  # Replace Space with Zero-width none-joiner after می and نمی
+  def self.replace_zwnj_mi(char)
+    mi = 'می'
+    nmi = 'نمی'
+    char.gsub!(/(^|\s)(#{mi}|#{nmi})\s(\S+)/, '\1\2‌\3')
+    char
+  end
 end

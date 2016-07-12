@@ -50,4 +50,15 @@ describe 'persian character' do
 
     expect(Persian.paragraph(text)).to eq(result)
   end
+
+  it 'should replace space with zwnj after می and نمی' do
+    mi_before = 'بچه ها نگاه می کنند'
+    mi_after = 'بچه ها نگاه می‌کنند'
+
+    nmi_before = 'هنوز واژه‌ها درد را نمی فهمند.'
+    nmi_after = 'هنوز واژه‌ها درد را نمی‌فهمند.'
+
+    expect(Persian.replace_zwnj_mi(mi_before)).to eq(mi_after)
+    expect(Persian.replace_zwnj_mi(nmi_before)).to eq(nmi_after)
+  end
 end
