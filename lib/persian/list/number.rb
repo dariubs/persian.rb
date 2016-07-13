@@ -2,7 +2,7 @@
 
 # Persian class
 class Persian
-  @english_persian_numbers = {
+  EN_FA_NUM = {
     # english numbers
     '0' => '۰',
     '1' => '۱',
@@ -14,9 +14,9 @@ class Persian
     '7' => '۷',
     '8' => '۸',
     '9' => '۹'
-  }
+  }.freeze
 
-  @persian_english_numbers = {
+  FA_EN_NUM = {
     # english numbers
     '۰' => '0',
     '۱' => '1',
@@ -28,9 +28,9 @@ class Persian
     '۷' => '7',
     '۸' => '8',
     '۹' => '9'
-  }
+  }.freeze
 
-  @arabic_persian_numbers = {
+  AR_FA_NUM = {
     # arabic numbers
     '٠' => '۰',
     '١' => '۱',
@@ -42,9 +42,9 @@ class Persian
     '٧' => '۷',
     '٨' => '۸',
     '٩' => '۹'
-  }
+  }.freeze
 
-  @persian_arabic_numbers = {
+  FA_AR_NUM = {
     # arabic numbers
     '۰' => '٠',
     '۱' => '١',
@@ -56,9 +56,9 @@ class Persian
     '۷' => '٧',
     '۸' => '٨',
     '۹' => '٩'
-  }
+  }.freeze
 
-  @arabic_english_numbers = {
+  AR_EN_NUM = {
     '٠' => '0',
     '١' => '1',
     '٢' => '2',
@@ -69,9 +69,9 @@ class Persian
     '٧' => '7',
     '٨' => '8',
     '٩' => '9'
-  }
+  }.freeze
 
-  @english_arabic_numbers = {
+  EN_AR_NUM = {
     '0' => '٠',
     '1' => '١',
     '2' => '٢',
@@ -82,9 +82,9 @@ class Persian
     '7' => '٧',
     '8' => '٨',
     '9' => '٩'
-  }
+  }.freeze
 
-  @ones = [
+  ONES = [
     'صفر',
     'یک',
     'دو',
@@ -95,9 +95,9 @@ class Persian
     'هفت',
     'هشت',
     'نه'
-  ]
+  ].freeze
 
-  @teens = [
+  TEENS = [
     'ده',
     'یازده',
     'دوازده',
@@ -108,9 +108,9 @@ class Persian
     'هفده',
     'هجده',
     'نوزده'
-  ]
+  ].freeze
 
-  @decimal = [
+  DECIMAL = [
     '',
     '',
     'بیست',
@@ -121,9 +121,9 @@ class Persian
     'هفتاد',
     'هشتاد',
     'نود'
-  ]
+  ].freeze
 
-  @hundreds = [
+  HUNDREDS = [
     '',
     'صد',
     'دویست',
@@ -134,9 +134,9 @@ class Persian
     'هفتصد',
     'هشتصد',
     'نهصد'
-  ]
+  ].freeze
 
-  @longscale = [
+  LONGSCALE = [
     '',
     'هزار',
     'میلیون',
@@ -159,5 +159,5 @@ class Persian
     'نانیلیارد',
     'دسیلیون',
     'دسیلیارد'
-  ]
+  ].freeze
 end

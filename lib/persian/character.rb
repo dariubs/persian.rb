@@ -4,7 +4,7 @@
 class Persian
   # Replace Arabic characters with Persian characters.
   def self.character(char)
-    @arabic_to_persian_chars.each { |k, v| char.gsub!(k, v) }
+    AR_FA_CHAR.each { |k, v| char.gsub!(k, v) }
     char
   end
 
@@ -17,7 +17,7 @@ class Persian
 
   # Remove Arabic harecats from text
   def self.remove_harekats(char)
-    @harekats.each { |v| char.gsub!(v, '') }
+    HAREKATS.each { |v| char.gsub!(v, '') }
     char
   end
 
@@ -34,20 +34,20 @@ class Persian
   # Replace english characters with it's key persian value on standard persian keyboard
   # For now just support QWERTY keyboard
   def self.english_to_persian_char(char)
-    @english_to_persian_keyboard_chars.each { |k, v| char.gsub!(k, v) }
+    EN_FA_KEYBOARD_CHAR.each { |k, v| char.gsub!(k, v) }
     char
   end
 
   # Replace standard persian keyboard characters with it's key persian value on english keyboard
   # For now just support QWERTY keyboard
   def self.persian_to_english_char(char)
-    @english_to_persian_keyboard_chars.each { |v, k| char.gsub!(k, v) }
+    EN_FA_KEYBOARD_CHAR.each { |v, k| char.gsub!(k, v) }
     char
   end
 
   # Add '‌ی' after names that end with ه, ا, و
   def self.fix_y_after_vowel(char)
-    char += '‌ی' if @end_vowel.include? char[-1]
+    char += '‌ی' if END_VOWEL.include? char[-1]
     char
   end
 

@@ -2,7 +2,7 @@
 
 # Persian class
 class Persian
-  @arabic_to_persian_chars = {
+  AR_FA_CHAR = {
     'ك' => 'ک',
     'دِ' => 'د',
     'بِ' => 'ب',
@@ -14,9 +14,9 @@ class Persian
     'ي' => 'ی',
     'ة' => 'ه',
     'هٔ' => 'ه'
-  }
+  }.freeze
 
-  @harekats = [
+  HAREKATS = [
     'َ', # Ae
     'ِ', # E
     'ُ', # O
@@ -25,16 +25,16 @@ class Persian
     'ٌ', # On
     'ْ', # Saken
     'ّ' # Tashdid
-  ]
+  ].freeze
 
-  @end_vowel = [
+  END_VOWEL = [
     'ه',
     'ا',
     'و'
-  ]
+  ].freeze
 
   # Exchange Standard QWERTY Keyboard layout
-  @english_to_persian_keyboard_chars = {
+  EN_FA_KEYBOARD_CHAR = {
     # Lowercase Letters
     'q' => 'ض',
     'w' => 'ص',
@@ -133,5 +133,5 @@ class Persian
     ')' => '(',
     '_' => 'ـ',
     '+' => '+'
-  }
+  }.freeze
 end
