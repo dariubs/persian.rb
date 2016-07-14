@@ -75,4 +75,10 @@ class Persian
     char.gsub!(/(#{a})\s(#{ast})/, '\1' + st)
     char
   end
+
+  # Remove keshide from text
+  def self.keshide(char)
+    char.gsub!(/ـ+/, '')
+    char
+  end
 end

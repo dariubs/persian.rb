@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-describe 'persian number' do
+describe 'persian number methods' do
   it 'should convert english numbers ( numeric ) to persian numbers' do
     expect(Persian.number(1_000)).to eq('۱۰۰۰')
   end

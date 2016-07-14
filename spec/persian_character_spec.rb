@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-describe 'persian character' do
+describe 'persian character methods' do
   it 'should convert arbaic characters to persian characters' do
     expect(Persian.character('ملوك')).to eq('ملوک')
   end
@@ -71,5 +71,11 @@ describe 'persian character' do
 
     expect(Persian.ast(first_before)).to eq(first_after)
     expect(Persian.ast(second_before)).to eq(second_after)
+  end
+
+  it 'should remove keshide characters' do
+    before = 'سلـــــــــــــــــــام چطوری؟'
+    after = 'سلام چطوری؟'
+    expect(Persian.keshide(before)).to eq(after)
   end
 end
