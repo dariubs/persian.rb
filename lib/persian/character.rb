@@ -81,4 +81,13 @@ class Persian
     char.gsub!(/ـ+/, '')
     char
   end
+
+  # Use ی instead of ئ if next char is ی
+  # Example پائیز => پاییز
+  def self.replace_e_y(char)
+    e = 'ئ'
+    y = 'ی'
+    char.gsub!(/#{e}(#{y})/, '\1\1')
+    char
+  end
 end

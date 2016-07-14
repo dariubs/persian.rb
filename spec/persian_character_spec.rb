@@ -78,4 +78,10 @@ describe 'persian character methods' do
     after = 'سلام چطوری؟'
     expect(Persian.keshide(before)).to eq(after)
   end
+
+  it 'should replace ئ with ی if next character is ی' do
+    before = 'پائیز'
+    after = 'پاییز'
+    expect(Persian.replace_e_y(before)).to eq(after)
+  end
 end
