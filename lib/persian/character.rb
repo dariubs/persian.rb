@@ -90,4 +90,9 @@ class Persian
     char.gsub!(/#{e}(#{y})/, '\1\1')
     char
   end
+
+  def self.three_dots(char)
+    char.gsub!(/\.{3,}/, '…')
+    char
+  end
 end

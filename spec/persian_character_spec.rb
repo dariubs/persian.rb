@@ -84,4 +84,10 @@ describe 'persian character methods' do
     after = 'پاییز'
     expect(Persian.replace_e_y(before)).to eq(after)
   end
+
+  it 'should replace 3 or more dots (.) with (…) character' do
+    before = 'خدانگهدار...'
+    after = 'خدانگهدار…'
+    expect(Persian.three_dots(before)).to eq(after)
+  end
 end
