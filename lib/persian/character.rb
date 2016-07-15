@@ -95,4 +95,14 @@ class Persian
     char.gsub!(/\.{3,}/, '…')
     char
   end
+
+  def self.suffix(char)
+    tar = 'تر'
+    ee = 'ی'
+    n = 'ن'
+    ha = 'ها'
+    ye = 'ی'
+    char.gsub!(/\s+(#{tar}(#{ee}(#{n})?)?)|(#{ha}(#{ye})?)\s+/, '‌\1')
+    char
+  end
 end

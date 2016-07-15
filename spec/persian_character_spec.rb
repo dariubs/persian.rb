@@ -90,4 +90,10 @@ describe 'persian character methods' do
     after = 'خدانگهدار…'
     expect(Persian.three_dots(before)).to eq(after)
   end
+
+  it 'should fix zwnj for تر - تری - ترین - ها - های suffixes' do
+    before = 'آن زیبا ترین رویا'
+    after = 'آن زیبا‌ترین رویا'
+    expect(Persian.suffix(before)).to eq(after)
+  end
 end
