@@ -105,4 +105,10 @@ class Persian
     char.gsub!(/\s+(#{tar}(#{ee}(#{n})?)?)|(#{ha}(#{ye})?)\s+/, '‌\1')
     char
   end
+
+  def self.remove_extra_question_mark(char)
+    mark = '؟'
+    char.gsub!(/(#{mark}){2,}/, '\1')
+    char
+  end
 end

@@ -96,4 +96,10 @@ describe 'persian character methods' do
     after = 'آن زیبا‌ترین رویا'
     expect(Persian.suffix(before)).to eq(after)
   end
+
+  it 'should remove extra persian question marks' do
+    before = 'چی؟؟؟؟'
+    after = 'چی؟'
+    expect(Persian.remove_extra_question_mark(before)).to eq(after)
+  end
 end
