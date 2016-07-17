@@ -111,4 +111,9 @@ class Persian
     char.gsub!(/(#{mark}){2,}/, '\1')
     char
   end
+
+  def self.add_zwnj(text, point)
+    text = text.scan(/^.{#{point}}|.+/).join("‌")
+    text
+  end
 end

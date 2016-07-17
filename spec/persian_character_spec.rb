@@ -102,4 +102,10 @@ describe 'persian character methods' do
     after = 'چی؟'
     expect(Persian.remove_extra_question_mark(before)).to eq(after)
   end
+
+  it 'should add zero-width none-joiner to specific index in string' do
+    before = 'دوستهایم'
+    after = 'دوست‌هایم'
+    expect(Persian.add_zwnj(before, 4)).to eq(after)
+  end
 end
