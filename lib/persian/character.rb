@@ -116,4 +116,11 @@ class Persian
     text = text.scan(/^.{#{point}}|.+/).join("‌")
     text
   end
+
+  def self.remove_question_exclamation(char)
+    question = '؟'
+    exclamation = '!'
+    char.gsub!(/(#{question})+(#{exclamation})+/, '\1\2')
+    char
+  end
 end

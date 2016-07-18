@@ -108,4 +108,11 @@ describe 'persian character methods' do
     after = 'دوست‌هایم'
     expect(Persian.add_zwnj(before, 4)).to eq(after)
   end
+
+  it 'should remove extra question and exclamation marks' do
+    before = 'نه بابا ؟؟!!!!!!!!!!!!!'
+    after = 'نه بابا ؟!'
+
+    expect(Persian.remove_question_exclamation(before)).to eq(after)
+  end
 end
