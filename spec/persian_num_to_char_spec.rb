@@ -4,10 +4,14 @@ require 'spec_helper'
 
 describe 'persian number to character methods' do
   it 'should convert english numbers to spelled persian character' do
-    expect(Persian.num_to_char(1234)).to eq('یک هزار و دویست و سی و چهار')
+    before = 1234
+    after = 'یک هزار و دویست و سی و چهار'
+    expect(Persian.num_to_char(before)).to eq(after)
   end
 
   it 'should convert Persian numbers to spelled persian number' do
-    expect(Persian.num_to_char('۲۰۴۸۲۰۴۸')).to eq('بیست میلیون و چهارصد و هشتاد و دو هزار و چهل و هشت')
+    before = '۲۰۴۸۲۰۴۸'
+    after = 'بیست میلیون و چهارصد و هشتاد و دو هزار و چهل و هشت'
+    expect(Persian.num_to_char(before)).to eq(after)
   end
 end

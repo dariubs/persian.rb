@@ -4,62 +4,92 @@ require 'spec_helper'
 
 describe 'persian number methods' do
   it 'should convert english numbers ( numeric ) to persian numbers' do
-    expect(Persian.number(1_000)).to eq('۱۰۰۰')
+    before = 1_000
+    after = '۱۰۰۰'
+    expect(Persian.number(before)).to eq(after)
   end
 
   it 'should convert english numbers (string) to persian numbers' do
-    expect(Persian.number('1234567890')).to eq('۱۲۳۴۵۶۷۸۹۰')
+    before = '1234567890'
+    after = '۱۲۳۴۵۶۷۸۹۰'
+    expect(Persian.number(before)).to eq(after)
   end
 
   it 'should convert arabic numbers to persian numbers' do
-    expect(Persian.number('٠١٢٣٤٥٦٧٨٩')).to eq('۰۱۲۳۴۵۶۷۸۹')
+    before = '٠١٢٣٤٥٦٧٨٩'
+    after = '۰۱۲۳۴۵۶۷۸۹'
+    expect(Persian.number(before)).to eq(after)
   end
 
   it 'should convert arabic and english numbers in strings to persian numbers' do
-    expect(Persian.number('عدد 1 و ٥ دو عدد زیبا هستند')).to eq('عدد ۱ و ۵ دو عدد زیبا هستند')
+    before = 'عدد 1 و ٥ دو عدد زیبا هستند'
+    after = 'عدد ۱ و ۵ دو عدد زیبا هستند'
+    expect(Persian.number(before)).to eq(after)
   end
 
   it 'should convert english numbers ( numeric ) to arabic numbers' do
-    expect(Persian.number(1_000, lang: 'ar')).to eq('١٠٠٠')
+    before = 1_000
+    after = '١٠٠٠'
+    expect(Persian.number(before, lang: 'ar')).to eq(after)
   end
 
   it 'should convert english numbers (string) to arabic numbers' do
-    expect(Persian.number('1234567890', lang: 'ar')).to eq('١٢٣٤٥٦٧٨٩٠')
+    before = '1234567890'
+    after = '١٢٣٤٥٦٧٨٩٠'
+    expect(Persian.number(before, lang: 'ar')).to eq(after)
   end
 
   it 'should convert persian numbers to arabic numbers' do
-    expect(Persian.number('۰۱۲۳۴۵۶۷۸۹', lang: 'ar')).to eq('٠١٢٣٤٥٦٧٨٩')
+    before = '۰۱۲۳۴۵۶۷۸۹'
+    after = '٠١٢٣٤٥٦٧٨٩'
+    expect(Persian.number(before, lang: 'ar')).to eq(after)
   end
 
   it 'should convert persian and english numbers in strings to arabic numbers' do
-    expect(Persian.number('عدد 1 و ۵ دو عدد زیبا هستند', lang: 'ar')).to eq('عدد ١ و ٥ دو عدد زیبا هستند')
+    before = 'عدد 1 و ۵ دو عدد زیبا هستند'
+    after = 'عدد ١ و ٥ دو عدد زیبا هستند'
+    expect(Persian.number(before, lang: 'ar')).to eq(after)
   end
 
   it 'should convert english numbers ( numeric ) to english numbers (string)' do
-    expect(Persian.number(1_000, lang: 'en')).to eq('1000')
+    before = 1_000
+    after = '1000'
+    expect(Persian.number(before, lang: 'en')).to eq(after)
   end
 
   it 'should convert arabic numbers (string) to english numbers' do
-    expect(Persian.number('١٢٣٤٥٦٧٨٩٠', lang: 'en')).to eq('1234567890')
+    before = '١٢٣٤٥٦٧٨٩٠'
+    after = '1234567890'
+    expect(Persian.number(before, lang: 'en')).to eq(after)
   end
 
   it 'should convert persian numbers to english numbers' do
-    expect(Persian.number('۰۱۲۳۴۵۶۷۸۹', lang: 'en')).to eq('0123456789')
+    before = '۰۱۲۳۴۵۶۷۸۹'
+    after = '0123456789'
+    expect(Persian.number(before, lang: 'en')).to eq(after)
   end
 
   it 'should convert persian and arabic numbers in strings to english numbers' do
-    expect(Persian.number('عدد ۱ و ٥ دو عدد زیبا هستند', lang: 'en')).to eq('عدد 1 و 5 دو عدد زیبا هستند')
+    before = 'عدد ۱ و ٥ دو عدد زیبا هستند'
+    after = 'عدد 1 و 5 دو عدد زیبا هستند'
+    expect(Persian.number(before, lang: 'en')).to eq(after)
   end
 
   it 'should convert english numbers ( numeric ) to english numbers (int)' do
-    expect(Persian.number(1000, lang: 'en', return: 'int')).to eq(1_000)
+    before = 1000
+    after = 1_000
+    expect(Persian.number(before, lang: 'en', return: 'int')).to eq(after)
   end
 
   it 'should convert arabic numbers (string) to english numbers (int)' do
-    expect(Persian.number('١٢٣٤٥٦٧٨٩٠', lang: 'en', return: 'int')).to eq(1_234_567_890)
+    before = '١٢٣٤٥٦٧٨٩٠'
+    after = 1_234_567_890
+    expect(Persian.number(before, lang: 'en', return: 'int')).to eq(after)
   end
 
   it 'should convert persian numbers to english numbers (int)' do
-    expect(Persian.number('۰۱۲۳۴۵۶۷۸۹', lang: 'en', return: 'int')).to eq(123_456_789)
+    before = '۰۱۲۳۴۵۶۷۸۹'
+    after = 123_456_789
+    expect(Persian.number(before, lang: 'en', return: 'int')).to eq(after)
   end
 end
