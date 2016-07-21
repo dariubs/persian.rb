@@ -113,7 +113,7 @@ class Persian
   end
 
   def self.add_zwnj(text, point)
-    text = text.scan(/^.{#{point}}|.+/).join("‌")
+    text = text.scan(/^.{#{point}}|.+/).join('‌')
     text
   end
 
