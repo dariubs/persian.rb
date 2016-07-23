@@ -123,4 +123,11 @@ class Persian
     char.gsub!(/(#{question})+(#{exclamation})+/, '\1\2')
     char
   end
+
+  def self.remove_stopwords(char)
+    stopwords = ['و', 'در', 'به', 'این', 'با', 'از', 'که', 'است', 'را']
+    words = char.scan(/\S+/)
+    keywords = words.select { |word| !stopwords.include?(word) }
+    keywords.join(' ')
+  end
 end

@@ -148,4 +148,11 @@ describe 'persian character methods' do
 
     expect(Persian.remove_question_exclamation(before)).to eq(after)
   end
+
+  it 'should remove stopwords from text' do
+    before = 'چوب در آب افتاد'
+    after = 'چوب آب افتاد'
+
+    expect(Persian.remove_stopwords(before)).to eq(after)
+  end
 end
