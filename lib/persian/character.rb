@@ -130,4 +130,10 @@ class Persian
     keywords = words.select { |word| !stopwords.include?(word) }
     keywords.join(' ')
   end
+
+  def self.remove_space_noghtevirgool(char)
+    noghtevirgool = '؛'
+    char.gsub!(/\s(#{noghtevirgool})/, '\1')
+    char
+  end
 end

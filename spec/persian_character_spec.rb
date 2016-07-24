@@ -155,4 +155,11 @@ describe 'persian character methods' do
 
     expect(Persian.remove_stopwords(before)).to eq(after)
   end
+
+  it 'should remove space before noghtevirgool' do
+    before = 'تصور برخی از اعضای انجمن نسبت به تهران کاملا متفاوت با قبل شده است ؛ آنها فکر می‌کردند که تهران یک بیابان و منطقه‌ای بی امکانات است.'
+    after = 'تصور برخی از اعضای انجمن نسبت به تهران کاملا متفاوت با قبل شده است؛ آنها فکر می‌کردند که تهران یک بیابان و منطقه‌ای بی امکانات است.'
+
+    expect(Persian.remove_space_noghtevirgool(before)).to eq(after)
+  end
 end
