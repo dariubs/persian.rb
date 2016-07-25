@@ -162,4 +162,11 @@ describe 'persian character methods' do
 
     expect(Persian.remove_space_noghtevirgool(before)).to eq(after)
   end
+
+  it 'should remove extra persian signs after noghtevirgool' do
+    before = 'آهان این شد؛!'
+    after = 'آهان این شد؛'
+
+    expect(Persian.remove_signs_after_noghtevirgool(before)).to eq(after)
+  end
 end

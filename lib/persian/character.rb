@@ -133,7 +133,14 @@ class Persian
 
   def self.remove_space_noghtevirgool(char)
     noghtevirgool = '؛'
-    char.gsub!(/\s(#{noghtevirgool})/, '\1')
+    char.gsub!(/\s+(#{noghtevirgool})/, '\1')
+    char
+  end
+
+  def self.remove_signs_after_noghtevirgool(char)
+    signs = '[\.،؛:!؟\-…]'
+    noghtevirgool = '؛'
+    char.gsub!(/(#{noghtevirgool})[#{signs}]+/, '\1')
     char
   end
 end
