@@ -149,4 +149,10 @@ class Persian
     char.gsub!(/(#{noghtevirgool})(\S)/, '\1 \2')
     char
   end
+
+  def self.remove_noghtevirgool_para_end(char)
+    noghtevirgool = '؛'
+    char.gsub!(/#{noghtevirgool}(\n|$)/, '.\1')
+    char
+  end
 end

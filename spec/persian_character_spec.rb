@@ -176,4 +176,11 @@ describe 'persian character methods' do
 
     expect(Persian.space_after_noghtevirgool(before)).to eq(after)
   end
+
+  it 'should replace noghtevirgool`s at the end of paragraphs with dot' do
+    before_first = 'این آخر کار است؛'
+    after_first = 'این آخر کار است.'
+
+    expect(Persian.remove_noghtevirgool_para_end(before_first)).to eq(after_first)
+  end
 end
