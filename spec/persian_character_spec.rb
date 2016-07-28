@@ -183,4 +183,11 @@ describe 'persian character methods' do
 
     expect(Persian.remove_noghtevirgool_para_end(before_first)).to eq(after_first)
   end
+
+  it 'should remove noghtevirgool after brackets' do
+    before = 'این یک مثال(؛برای تست) است'
+    after = 'این یک مثال(برای تست) است'
+
+    expect(Persian.remove_noghtevirgool_baz_start(before)).to eq(after)
+  end
 end

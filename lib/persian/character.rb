@@ -155,4 +155,12 @@ class Persian
     char.gsub!(/#{noghtevirgool}(\n|$)/, '.\1')
     char
   end
+
+  def self.remove_noghtevirgool_baz_start(char)
+    noghtevirgool = '؛'
+
+    regex = /([\(\[«])[ ‌]*[#{noghtevirgool}]/
+    char.gsub!(regex, '\1')
+    char
+  end
 end
