@@ -4,11 +4,12 @@
 class Persian
   def self.word_counter(text)
     list = basic_tokenizer(text)
-    occurrence = Hash.new
+    occurrence = {}
+    occurrence.default = 0
 
-    list.each{ |item|
+    list.each do |item|
       occurrence[item] += 1
-    }
+    end
 
     occurrence
   end
