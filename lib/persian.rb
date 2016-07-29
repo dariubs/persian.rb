@@ -3,6 +3,7 @@
 require 'persian/number'
 require 'persian/character'
 require 'persian/num_to_char'
+require 'persian/tokenize'
 
 # lists
 require 'persian/list/number'
