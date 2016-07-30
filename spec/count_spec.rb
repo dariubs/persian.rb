@@ -28,4 +28,25 @@ describe 'persian counter methods' do
     }
     expect(Persian.word_counter(before)).to eq(after)
   end
+
+  it 'should return a hash of characters with their number of occurrence' do
+    before = 'من غلام قمرم غیر قمر هیچ مگو'
+    after = {
+      'م' => 6,
+      'ن' => 1,
+      ' ' => 6,
+      'غ' => 2,
+      'ل' => 1,
+      'ا' => 1,
+      'ق' => 2,
+      'ر' => 3,
+      'ی' => 2,
+      'ه' => 1,
+      'چ' => 1,
+      'گ' => 1,
+      'و' => 1
+    }
+
+    expect(Persian.char_counter(before)).to eq(after)
+  end
 end
