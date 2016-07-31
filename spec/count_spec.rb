@@ -26,7 +26,11 @@ describe 'persian counter methods' do
       'بوده' => 1,
       'است' => 1
     }
+    arg = 'با'
+    after_with_arg = 2
+
     expect(Persian.word_counter(before)).to eq(after)
+    expect(Persian.word_counter(before, arg)).to eq(after_with_arg)
   end
 
   it 'should return a hash of characters with their number of occurrence' do
@@ -46,7 +50,10 @@ describe 'persian counter methods' do
       'گ' => 1,
       'و' => 1
     }
+    arg = 'غ'
+    after_with_arg = 2
 
     expect(Persian.char_counter(before)).to eq(after)
+    expect(Persian.char_counter(before, arg)).to eq(after_with_arg)
   end
 end
