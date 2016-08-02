@@ -170,4 +170,11 @@ class Persian
     text.gsub!(pattern, '\1\2')
     text
   end
+
+  def self.space_after_virgool(text)
+    virgool = '،'
+
+    text.gsub!(/(#{virgool})(\S)/, '\1 \2')
+    text
+  end
 end

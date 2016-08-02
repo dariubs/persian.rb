@@ -193,4 +193,11 @@ describe 'persian character methods' do
 
     expect(Persian.remove_signs_after_virgool(before)).to eq(after)
   end
+
+  it 'should add space after virgool if missing' do
+    before = 'لئوناردو یک نقاش پرکار نبود،در حقیقت او پرکارترین نقشه‌کش و طراح بود.'
+    after = 'لئوناردو یک نقاش پرکار نبود، در حقیقت او پرکارترین نقشه‌کش و طراح بود.'
+
+    expect(Persian.space_after_virgool(before)).to eq(after)
+  end
 end
