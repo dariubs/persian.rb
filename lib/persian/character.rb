@@ -156,4 +156,11 @@ class Persian
     text.gsub!(regex, '\1')
     text
   end
+
+  def self.remove_space_before_virgool(text)
+    virgool = '،'
+
+    text.gsub!(/\s+(#{virgool})/, '\1')
+    text
+  end
 end

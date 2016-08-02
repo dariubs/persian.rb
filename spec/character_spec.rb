@@ -179,4 +179,11 @@ describe 'persian character methods' do
 
     expect(Persian.remove_noghtevirgool_baz_start(before)).to eq(after)
   end
+
+  it 'should remove spaces before virgool' do
+    before = 'لئوناردو یک نقاش پرکار نبود ، در حقیقت او پرکارترین نقشه‌کش و طراح بود.'
+    after = 'لئوناردو یک نقاش پرکار نبود، در حقیقت او پرکارترین نقشه‌کش و طراح بود.'
+
+    expect(Persian.remove_space_before_virgool(before)).to eq(after)
+  end
 end
