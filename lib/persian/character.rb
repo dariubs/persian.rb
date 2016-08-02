@@ -163,4 +163,11 @@ class Persian
     text.gsub!(/\s+(#{virgool})/, '\1')
     text
   end
+
+  def self.remove_signs_after_virgool(text)
+    pattern = /(،)([ ‌]+)?([،؛:!؟\-][\.،؛:!؟\-]*|\.(?!\.))/
+
+    text.gsub!(pattern, '\1\2')
+    text
+  end
 end
