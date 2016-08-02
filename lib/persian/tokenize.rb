@@ -2,6 +2,8 @@
 
 # Persian class :: Tokenizers
 class Persian
+  # Basic persian word tokenizer
+  # Return an array of words
   def self.basic_tokenizer(text)
     symbols = ['!', '﷼', ':', '؛', '؟', '،', '-']
     pair_pre = ['(', '{', '«', '<', '[']
@@ -26,5 +28,12 @@ class Persian
     end
 
     tokens.flatten
+  end
+
+  # Split paragraphs
+  # Return an array of paragraphs
+  def self.split_paragraphs(text)
+    text = text.split("\n").reject(&:empty?)
+    text
   end
 end

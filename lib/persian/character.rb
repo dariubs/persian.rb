@@ -51,13 +51,6 @@ class Persian
     text
   end
 
-  # Split paragraphs
-  # Return an array of paragraphs
-  def self.paragraph(text)
-    text = text.split("\n").reject(&:empty?)
-    text
-  end
-
   # Replace Space with Zero-width none-joiner after می and نمی
   def self.replace_zwnj_mi(text)
     mi = 'می'
