@@ -56,4 +56,14 @@ describe 'persian counter methods' do
     expect(Persian.char_counter(before)).to eq(after)
     expect(Persian.char_counter(before, arg)).to eq(after_with_arg)
   end
+
+  it 'should return number of paragraphs' do
+    text = "
+یوهانس برامس در سال ۱۸۳۳ در شهر هامبورگ آلمان در خانواده‌ای فقیر به دنیا آمد. تحصیلات ابتدایی موسیقی را نزد پدرش که نوازنده کنترباس بود فرا گرفت.
+برامس با ویولونیست‌های مشهوری چون رمنی و یواخیم آشنا شد و در طول این آشنایی بود که رمنی موسیقی محلی مجارستان را به برامس معرفی کرد و تحت تأثیر آن برامس رقص‌های مجار خود را نوشت.
+"
+    after = 2
+
+    expect(Persian.paragraph_counter(text)).to eq(after)
+  end
 end
