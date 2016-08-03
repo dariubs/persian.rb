@@ -10,7 +10,7 @@ class Persian
     if ((num / 100) >= 0) && ((num / 100) < 10)
 
       if num < 10
-        if (num == 0) && inner
+        if num.zero? && inner
           words += ''
         elsif inner
           words += ' و '
@@ -33,7 +33,7 @@ class Persian
     else
       words += ' و ' if inner
 
-      if (num.to_s.length % 3) != 0
+      if (num.to_s.length % 3).nonzero?
         current_split = num.to_s[0..(num.to_s.length % 3 - 1).to_i]
         more_split = num.to_s.sub(current_split, '')
         words += num_to_char(current_split) + ' ' + LONGSCALE[(num.to_s.length / 3)] + num_to_char(more_split, true)
