@@ -5,6 +5,7 @@ require 'persian/character'
 require 'persian/num_to_char'
 require 'persian/tokenize'
 require 'persian/count'
+require 'persian/dynamic'
 
 # lists
 require 'persian/list/number'
