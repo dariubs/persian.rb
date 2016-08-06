@@ -200,4 +200,12 @@ describe 'persian character methods' do
 
     expect(Persian.space_after_virgool(before)).to eq(after)
   end
+
+  it 'should remove specific character from every words in text' do
+    before = 'این برای پاک کردن نون است'
+    char = 'ن'
+    after = 'ای برای پاک کرد و است'
+
+    expect(Persian.remove_character(before, char)).to eq(after)
+  end
 end

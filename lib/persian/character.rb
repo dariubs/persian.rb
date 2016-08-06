@@ -177,4 +177,9 @@ class Persian
     text.gsub!(/(#{virgool})(\S)/, '\1 \2')
     text
   end
+
+  def self.remove_character(text, char)
+    text.gsub!(/(#{char})/,'')
+    text
+  end
 end
