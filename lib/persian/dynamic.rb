@@ -13,11 +13,11 @@ class Persian
         text = Persian.rm_char(arg[0], get_constant(char))
         text
       else
-        super(method, *arg, &block)
+        super
       end
     else
       # Run default no method error
-      super(method, *arg, &block)
+      super
     end
   end
 
