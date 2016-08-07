@@ -178,8 +178,8 @@ class Persian
     text
   end
 
-  def self.remove_character(text, char)
-    text.gsub!(/(#{char})/,'')
+  def self.rm_char(text, char)
+    text.gsub!(/(#{char})/, '')
     text
   end
 end

@@ -206,6 +206,6 @@ describe 'persian character methods' do
     char = 'ن'
     after = 'ای برای پاک کرد و است'
 
-    expect(Persian.remove_character(before, char)).to eq(after)
+    expect(Persian.rm_char(before, char)).to eq(after)
   end
 end
