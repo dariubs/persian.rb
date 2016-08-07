@@ -8,6 +8,7 @@ require 'persian/count'
 require 'persian/dynamic'
 
 # lists
+require 'persian/list/alphabet'
 require 'persian/list/number'
 require 'persian/list/character'
 
