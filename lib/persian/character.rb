@@ -182,4 +182,9 @@ class Persian
     text.gsub!(/(#{char})/, '')
     text
   end
+
+  def self.codepoint_to_char(char)
+    return [char].pack('U') if char.is_a? Fixnum
+    [char.hex].pack('U')
+  end
 end

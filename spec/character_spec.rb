@@ -208,4 +208,11 @@ describe 'persian character methods' do
 
     expect(Persian.rm_char(before, char)).to eq(after)
   end
+
+  it 'should return unicode character from codepoint hex' do
+    codepoint = 0x062B
+    char = 'ث'
+
+    expect(Persian.codepoint_to_char(codepoint)).to eq(char)
+  end
 end

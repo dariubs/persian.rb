@@ -21,7 +21,7 @@ class Persian
     end
   end
 
-  def respond_to?(method, include_private = false)
+  def self.respond_to?(method, include_private = false)
     method.to_s.start_with?('remove_') || super
   end
 
