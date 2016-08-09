@@ -24,3 +24,6 @@ Style/WordArray:
 
 Style/AsciiComments:
   Enabled: false
+
+Style/MethodMissing:
+  Enabled: false
