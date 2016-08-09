@@ -7,7 +7,7 @@ describe 'persian tokenizers' do
     before = 'آیا روزی به اسرار این اتفاقات ماوراء طبیعی، این انعکاس سایهٔ روح که در حالت اغماء و برزخ بین خواب و بیداری جلوه می‌کند کسی پی خواهد برد؟'
     after = ['آیا', 'روزی', 'به', 'اسرار', 'این', 'اتفاقات', 'ماوراء', 'طبیعی', '،', 'این', 'انعکاس', 'سایهٔ', 'روح', 'که', 'در', 'حالت', 'اغماء', 'و', 'برزخ', 'بین', 'خواب', 'و', 'بیداری', 'جلوه', 'می‌کند', 'کسی', 'پی', 'خواهد', 'برد', '؟']
 
-    expect(Persian.basic_tokenizer(before)).to eq(after)
+    expect(Persian::Tokenize.basic_tokenizer(before)).to eq(after)
   end
 
   it 'should split paragraphs' do
@@ -18,6 +18,6 @@ describe 'persian tokenizers' do
     result = ['یوهانس برامس در سال ۱۸۳۳ در شهر هامبورگ آلمان در خانواده‌ای فقیر به دنیا آمد. تحصیلات ابتدایی موسیقی را نزد پدرش که نوازنده کنترباس بود فرا گرفت.',
               'برامس با ویولونیست‌های مشهوری چون رمنی و یواخیم آشنا شد و در طول این آشنایی بود که رمنی موسیقی محلی مجارستان را به برامس معرفی کرد و تحت تأثیر آن برامس رقص‌های مجار خود را نوشت.']
 
-    expect(Persian.split_paragraphs(text)).to eq(result)
+    expect(Persian::Tokenize.split_paragraphs(text)).to eq(result)
   end
 end
