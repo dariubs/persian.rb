@@ -35,5 +35,17 @@ module Persian
       num = number(num)
       num.reverse.gsub(/(\S{3})(?=\S)/, '\\1,').reverse
     end
+
+    def self.to_persian(num)
+      number(num, lang: 'fa')
+    end
+
+    def self.to_english(num)
+      number(num, lang: 'en')
+    end
+
+    def self.to_arabic(num)
+      number(num, lang: 'ar')
+    end
   end
 end

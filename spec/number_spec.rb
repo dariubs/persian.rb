@@ -92,4 +92,25 @@ describe 'persian number methods' do
     after = 123_456_789
     expect(Persian::Number.number(before, lang: 'en', return: 'int')).to eq(after)
   end
+
+  it 'should convert any number to persian number' do
+    before = '1234567890'
+    after = '۱۲۳۴۵۶۷۸۹۰'
+
+    expect(Persian::Number.to_persian(before)).to eq(after)
+  end
+
+  it 'should convert any number to english number' do
+    before = '١٢٣٤٥٦٧٨٩٠'
+    after = '1234567890'
+
+    expect(Persian::Number.to_english(before)).to eq(after)
+  end
+
+  it 'should convert any number to arabic number' do
+    before = '1234567890'
+    after = '١٢٣٤٥٦٧٨٩٠'
+
+    expect(Persian::Number.to_arabic(before)).to eq(after)
+  end
 end
