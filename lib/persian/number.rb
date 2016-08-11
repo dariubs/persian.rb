@@ -1,3 +1,4 @@
+
 # -*- coding: UTF-8 -*-
 
 # Persian module
@@ -46,6 +47,10 @@ module Persian
 
     def self.to_arabic(num)
       number(num, lang: 'ar')
+    end
+
+    def self.random(params = nil)
+      number(rand(params))
     end
   end
 end

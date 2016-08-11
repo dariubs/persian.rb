@@ -113,4 +113,10 @@ describe 'persian number methods' do
 
     expect(Persian::Number.to_arabic(before)).to eq(after)
   end
+
+  it 'should return a random number in persian' do
+    range = 20
+
+    expect(Persian::Number.number(Persian::Number.random(range), lang: 'en', return: 'int')).to be <= range
+  end
 end
