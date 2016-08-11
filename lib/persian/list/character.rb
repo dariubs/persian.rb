@@ -2,7 +2,10 @@
 
 # Persian class
 module Persian
+  # Class text
   class Text
+    include Alphabet
+
     AR_FA_CHAR = {
       'ك' => 'ک',
       'دِ' => 'د',
@@ -18,20 +21,20 @@ module Persian
     }.freeze
 
     HAREKATS = [
-      'َ', # Ae
-      'ِ', # E
-      'ُ', # O
-      'ً', # An
-      'ٍ', # En
-      'ٌ', # On
-      'ْ', # Saken
-      'ّ' # Tashdid
+      AA, # Ae
+      EE, # E
+      OO, # O
+      AN, # An
+      EN, # En
+      ON, # On
+      SAKEN, # Saken
+      TASHDID # Tashdid
     ].freeze
 
     END_VOWEL = [
-      'ه',
-      'ا',
-      'و'
+      HE_DOCHESHM,
+      ALEF,
+      VAV
     ].freeze
 
     # Exchange Standard QWERTY Keyboard layout

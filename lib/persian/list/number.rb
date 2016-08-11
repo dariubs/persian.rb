@@ -2,87 +2,90 @@
 
 # Persian class
 module Persian
+  # Number class
   class Number
+    include Alphabet
+
     EN_FA_NUM = {
       # english numbers
-      '0' => '۰',
-      '1' => '۱',
-      '2' => '۲',
-      '3' => '۳',
-      '4' => '۴',
-      '5' => '۵',
-      '6' => '۶',
-      '7' => '۷',
-      '8' => '۸',
-      '9' => '۹'
+      ZERO    => SEFR,
+      ONE     => YEK,
+      TWO     => DOW,
+      THREE   => SE,
+      FOUR    => CHAHAR,
+      FIVE    => PANJ,
+      SIX     => SHESH,
+      SEVEN   => HAFT,
+      EIGHT   => HASHT,
+      NINE    => NOH
     }.freeze
 
     FA_EN_NUM = {
       # english numbers
-      '۰' => '0',
-      '۱' => '1',
-      '۲' => '2',
-      '۳' => '3',
-      '۴' => '4',
-      '۵' => '5',
-      '۶' => '6',
-      '۷' => '7',
-      '۸' => '8',
-      '۹' => '9'
+      SEFR    => ZERO,
+      YEK     => ONE,
+      DOW     => TWO,
+      SE      => THREE,
+      CHAHAR  => FOUR,
+      PANJ    => FIVE,
+      SHESH   => SIX,
+      HAFT    => SEVEN,
+      HASHT   => EIGHT,
+      NOH     => NINE
     }.freeze
 
     AR_FA_NUM = {
       # arabic numbers
-      '٠' => '۰',
-      '١' => '۱',
-      '٢' => '۲',
-      '٣' => '۳',
-      '٤' => '۴',
-      '٥' => '۵',
-      '٦' => '۶',
-      '٧' => '۷',
-      '٨' => '۸',
-      '٩' => '۹'
+      SIFR    => SEFR,
+      WAHID   => YEK,
+      ATHNAN  => DOW,
+      THALETH => SE,
+      ARBE    => CHAHAR,
+      KHAMSE  => PANJ,
+      SETE    => SHESH,
+      SABE    => HAFT,
+      THMANY  => HASHT,
+      LAYS    => NOH
     }.freeze
 
     FA_AR_NUM = {
       # arabic numbers
-      '۰' => '٠',
-      '۱' => '١',
-      '۲' => '٢',
-      '۳' => '٣',
-      '۴' => '٤',
-      '۵' => '٥',
-      '۶' => '٦',
-      '۷' => '٧',
-      '۸' => '٨',
-      '۹' => '٩'
+      SEFR    => SIFR,
+      YEK     => WAHID,
+      DOW     => ATHNAN,
+      SE      => THALETH,
+      CHAHAR  => ARBE,
+      PANJ    => KHAMSE,
+      SHESH   => SETE,
+      HAFT    => SABE,
+      HASHT   => THMANY,
+      NOH     => LAYS
     }.freeze
 
     AR_EN_NUM = {
-      '٠' => '0',
-      '١' => '1',
-      '٢' => '2',
-      '٣' => '3',
-      '٤' => '4',
-      '٥' => '5',
-      '٦' => '6',
-      '٧' => '7',
-      '٨' => '8',
-      '٩' => '9'
+      SIFR    => ZERO,
+      WAHID   => ONE,
+      ATHNAN  => TWO,
+      THALETH => THREE,
+      ARBE    => FOUR,
+      KHAMSE  => FIVE,
+      SETE    => SIX,
+      SABE    => SEVEN,
+      THMANY  => EIGHT,
+      LAYS    => NINE
     }.freeze
 
     EN_AR_NUM = {
-      '0' => '٠',
-      '1' => '١',
-      '2' => '٢',
-      '3' => '٣',
-      '4' => '٤',
-      '5' => '٥',
-      '6' => '٦',
-      '7' => '٧',
-      '8' => '٨',
-      '9' => '٩'
+      ZERO    => SIFR,
+      ONE     => WAHID,
+      TWO     => ATHNAN,
+      THREE   => THALETH,
+      FOUR    => ARBE,
+      FIVE    => KHAMSE,
+      SIX     => SETE,
+      SEVEN   => SABE,
+      EIGHT   => THMANY,
+      NINE    => LAYS
     }.freeze
 
     ONES = [

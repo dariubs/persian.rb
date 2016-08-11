@@ -5,7 +5,7 @@ module Persian
     BE            = 'ب'.freeze
     PE            = 'پ'.freeze
     TE            = 'ت'.freeze
-    SE            = 'ث'.freeze
+    THE           = 'ث'.freeze
     JIM           = 'ج'.freeze
     CHE           = 'چ'.freeze
     HE_JIMI       = 'ح'.freeze
@@ -70,5 +70,38 @@ module Persian
     ZARBDAR       = '×'.freeze
 
     KESH          = 'ـ'.freeze
+
+    SEFR          = '۰'.freeze
+    YEK           = '۱'.freeze
+    DOW           = '۲'.freeze
+    SE            = '۳'.freeze
+    CHAHAR        = '۴'.freeze
+    PANJ          = '۵'.freeze
+    SHESH         = '۶'.freeze
+    HAFT          = '۷'.freeze
+    HASHT         = '۸'.freeze
+    NOH           = '۹'.freeze
+
+    SIFR          = '٠'.freeze
+    WAHID         = '١'.freeze
+    ATHNAN        = '٢'.freeze
+    THALETH       = '٣'.freeze
+    ARBE          = '٤'.freeze
+    KHAMSE        = '٥'.freeze
+    SETE          = '٦'.freeze
+    SABE          = '٧'.freeze
+    THMANY        = '٨'.freeze
+    LAYS          = '٩'.freeze
+
+    ZERO          = '0'.freeze
+    ONE           = '1'.freeze
+    TWO           = '2'.freeze
+    THREE         = '3'.freeze
+    FOUR          = '4'.freeze
+    FIVE          = '5'.freeze
+    SIX           = '6'.freeze
+    SEVEN         = '7'.freeze
+    EIGHT         = '8'.freeze
+    NINE          = '9'.freeze
   end
 end
