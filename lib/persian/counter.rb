@@ -3,7 +3,7 @@
 # Persian Module
 module Persian
   # Persian count class
-  class Count
+  class Counter
     def self.char_counter(text, char = nil)
       list = text.split(//)
       occurrence = {}
@@ -21,7 +21,7 @@ module Persian
     end
 
     def self.word_counter(text, keyword = nil)
-      list = Persian::Tokenize.basic_tokenizer(text)
+      list = Persian::Tokenizer.tokenize(text)
       occurrence = {}
       occurrence.default = 0
 
@@ -37,7 +37,7 @@ module Persian
     end
 
     def self.paragraph_counter(text)
-      list = Persian::Tokenize.split_paragraphs text
+      list = Persian::Tokenizer.split_paragraphs text
       list.length
     end
   end

@@ -29,8 +29,8 @@ describe 'persian counter methods' do
     arg = 'با'
     after_with_arg = 2
 
-    expect(Persian::Count.word_counter(before)).to eq(after)
-    expect(Persian::Count.word_counter(before, arg)).to eq(after_with_arg)
+    expect(Persian::Counter.word_counter(before)).to eq(after)
+    expect(Persian::Counter.word_counter(before, arg)).to eq(after_with_arg)
   end
 
   it 'should return a hash of characters with their number of occurrence' do
@@ -53,8 +53,8 @@ describe 'persian counter methods' do
     arg = 'غ'
     after_with_arg = 2
 
-    expect(Persian::Count.char_counter(before)).to eq(after)
-    expect(Persian::Count.char_counter(before, arg)).to eq(after_with_arg)
+    expect(Persian::Counter.char_counter(before)).to eq(after)
+    expect(Persian::Counter.char_counter(before, arg)).to eq(after_with_arg)
   end
 
   it 'should return number of paragraphs' do
@@ -64,6 +64,6 @@ describe 'persian counter methods' do
 "
     after = 2
 
-    expect(Persian::Count.paragraph_counter(text)).to eq(after)
+    expect(Persian::Counter.paragraph_counter(text)).to eq(after)
   end
 end

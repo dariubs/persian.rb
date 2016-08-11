@@ -3,10 +3,10 @@
 # Persian module
 module Persian
   # Persian tokenize class
-  class Tokenize
+  class Tokenizer
     # Basic persian word tokenizer
     # Return an array of words
-    def self.basic_tokenizer(text)
+    def self.tokenize(text)
       symbols = ['!', '﷼', ':', '؛', '؟', '،', '-']
       pair_pre = ['(', '{', '«', '<', '[']
       pair_post = [')', '}', '»', '>', ']']
