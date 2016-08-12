@@ -1,10 +1,29 @@
-
 # -*- coding: UTF-8 -*-
 
 # Persian module
 module Persian
   # Persian Number class
   class Number
+    def initialize(num)
+      @value = Persian::Number.number(num)
+    end
+
+    def +(other)
+      Number.to_persian(Number.to_i(@value) + Number.to_i(other))
+    end
+
+    def -(other)
+      Number.to_persian(Number.to_i(@value) - Number.to_i(other))
+    end
+
+    def *(other)
+      Number.to_persian(Number.to_i(@value) * Number.to_i(other))
+    end
+
+    def /(other)
+      Number.to_persian(Number.to_i(@value) / Number.to_i(other))
+    end
+
     def self.number(num, opts = { lang: 'fa', return: 'string' })
       opts[:lang] = 'fa' if opts[:lang].nil?
       opts[:return] = 'string' if opts[:return].nil?
@@ -47,6 +66,10 @@ module Persian
 
     def self.to_arabic(num)
       number(num, lang: 'ar')
+    end
+
+    def self.to_i(num)
+      number(num, lang: 'en', return: 'int')
     end
 
     def self.random(params = nil)

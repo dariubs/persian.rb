@@ -119,4 +119,11 @@ describe 'persian number methods' do
 
     expect(Persian::Number.number(Persian::Number.random(range), lang: 'en', return: 'int')).to be <= range
   end
+
+  it 'should return integer of any number' do
+    before = '۱۲۳۴۵۶۷۸۹۰'
+    after = 1_234_567_890
+
+    expect(Persian::Number.to_i(before)).to eq(after)
+  end
 end
