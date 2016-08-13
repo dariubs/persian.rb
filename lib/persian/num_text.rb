@@ -3,6 +3,7 @@
 # Persian module
 module Persian
   # Persian NumText class
+  # Work with number in words
   class NumText < Number
     def self.num_to_char(num, inner = false)
       num = Persian::Number.number(num, lang: 'en', return: 'int') if num.is_a? String

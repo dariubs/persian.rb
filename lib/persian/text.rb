@@ -3,6 +3,7 @@
 # Persian module
 module Persian
   # Persian Text class
+  # Digest Persian texts
   class Text
     # Replace Arabic characters with Persian characters.
     def self.character(text)

@@ -3,6 +3,7 @@
 # Persian Module
 module Persian
   # Persian count class
+  # Basic  counters for persian chars, texts, sentences and paragraphs
   class Counter
     def self.char_counter(text, char = nil)
       list = text.split(//)

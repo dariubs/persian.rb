@@ -3,6 +3,8 @@
 # Persian module
 module Persian
   # Persian Number class
+  # Init an instance with pass a number
+  # Basic operators works with persian string of numbers
   class Number
     def initialize(num)
       @value = Persian::Number.number(num)
