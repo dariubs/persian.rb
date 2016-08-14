@@ -41,5 +41,10 @@ module Persian
       list = Persian::Tokenizer.split_paragraphs text
       list.length
     end
+
+    def self.uniq_char_counter(text)
+      text = text.split(//)
+      text.uniq.size
+    end
   end
 end

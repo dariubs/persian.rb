@@ -66,4 +66,11 @@ describe 'persian counter methods' do
 
     expect(Persian::Counter.paragraph_counter(text)).to eq(after)
   end
+
+  it 'shoud count uniq characters' do
+    text = 'دوستت دارم'
+    size = 8
+
+    expect(Persian::Counter.uniq_char_counter(text)).to eq(size)
+  end
 end
