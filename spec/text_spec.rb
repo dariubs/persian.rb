@@ -208,4 +208,11 @@ describe 'persian character methods' do
 
     expect(Persian::Text.rm_char(before, char)).to eq(after)
   end
+
+  it 'should replace end of line virgool with dot' do
+    text = 'جمله با ویرگول پایان نمیپذیرد،'
+    after = 'جمله با ویرگول پایان نمیپذیرد.'
+
+    expect(Persian::Text.rm_virgool_in_end(text)).to eq(after)
+  end
 end

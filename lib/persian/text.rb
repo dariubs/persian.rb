@@ -185,5 +185,10 @@ module Persian
       text.gsub!(/(#{char})/, '')
       text
     end
+
+    def self.rm_virgool_in_end(text)
+      text.gsub!(/([])([ ‌\n]+)?$/, '.\2')
+      text
+    end
   end
 end

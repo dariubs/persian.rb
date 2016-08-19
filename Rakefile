@@ -3,17 +3,20 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 require 'persian/version'
 
-desc 'Build gem'
-task :buildgem do
+desc 'Build and install persian gem'
+task default: [:build, :install]
+
+desc 'Build persian gem'
+task :build do
   sh('gem build persian.gemspec')
 end
 
-desc 'install builded version of gem'
-task :installgem do
+desc 'Install builded lastest version of gem'
+task :install do
   sh('gem install persian-' + Persian::VERSION + '.gem')
 end
 
-desc 'Run specs with Rspec'
+desc 'Run Rspec specs'
 task :rspec do
   sh('rspec')
 end
@@ -27,11 +30,7 @@ desc 'Run code tests'
 task test: [:rspec, :rubocop] do
 end
 
-desc 'Generate docs'
+desc 'Generate yard docs in doc/ directory'
 task :doc do
   sh('yard doc')
-end
-
-desc 'Build and install gem'
-task default: [:buildgem, :installgem] do
 end
