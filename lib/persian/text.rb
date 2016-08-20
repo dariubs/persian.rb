@@ -187,7 +187,12 @@ module Persian
     end
 
     def self.rm_virgool_in_end(text)
-      text.gsub!(/([])([ ‌\n]+)?$/, '.\2')
+      text.gsub!(/(،)([ ‌\n]+)?$/, '.\2')
+      text
+    end
+
+    def self.space_after_dot(text)
+      text.gsub!(/(\.)(\S)/, '\1 \2')
       text
     end
   end

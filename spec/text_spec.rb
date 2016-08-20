@@ -215,4 +215,10 @@ describe 'persian character methods' do
 
     expect(Persian::Text.rm_virgool_in_end(text)).to eq(after)
   end
+
+  it 'should add space after dot\'s ends with no space character' do
+    text = 'سلام.اسپیس کو؟'
+    after = 'سلام. اسپیس کو؟'
+    expect(Persian::Text.space_after_dot(text)).to eq(after)
+  end
 end
