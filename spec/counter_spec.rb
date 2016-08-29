@@ -3,6 +3,30 @@
 require 'spec_helper'
 
 describe 'persian counter methods' do
+  it 'should return a hash of characters with their number of occurrence' do
+    before = 'من غلام قمرم غیر قمر هیچ مگو'
+    after = {
+      'م' => 6,
+      'ن' => 1,
+      ' ' => 6,
+      'غ' => 2,
+      'ل' => 1,
+      'ا' => 1,
+      'ق' => 2,
+      'ر' => 3,
+      'ی' => 2,
+      'ه' => 1,
+      'چ' => 1,
+      'گ' => 1,
+      'و' => 1
+    }
+    arg = 'غ'
+    after_with_arg = 2
+
+    expect(Persian::Counter.character(before)).to eq(after)
+    expect(Persian::Counter.character(before, arg)).to eq(after_with_arg)
+  end
+
   it 'should return a hash of words as key and number of occurrence of word as value' do
     before = 'پرچم دوران هخامنشی به احتمال زیاد عقابی با بال های گشوده با قرص خورشیدی در پشت سر عقاب بوده است'
     after = {
@@ -29,32 +53,8 @@ describe 'persian counter methods' do
     arg = 'با'
     after_with_arg = 2
 
-    expect(Persian::Counter.word_counter(before)).to eq(after)
-    expect(Persian::Counter.word_counter(before, arg)).to eq(after_with_arg)
-  end
-
-  it 'should return a hash of characters with their number of occurrence' do
-    before = 'من غلام قمرم غیر قمر هیچ مگو'
-    after = {
-      'م' => 6,
-      'ن' => 1,
-      ' ' => 6,
-      'غ' => 2,
-      'ل' => 1,
-      'ا' => 1,
-      'ق' => 2,
-      'ر' => 3,
-      'ی' => 2,
-      'ه' => 1,
-      'چ' => 1,
-      'گ' => 1,
-      'و' => 1
-    }
-    arg = 'غ'
-    after_with_arg = 2
-
-    expect(Persian::Counter.char_counter(before)).to eq(after)
-    expect(Persian::Counter.char_counter(before, arg)).to eq(after_with_arg)
+    expect(Persian::Counter.word(before)).to eq(after)
+    expect(Persian::Counter.word(before, arg)).to eq(after_with_arg)
   end
 
   it 'should return number of paragraphs' do
@@ -64,13 +64,13 @@ describe 'persian counter methods' do
 "
     after = 2
 
-    expect(Persian::Counter.paragraph_counter(text)).to eq(after)
+    expect(Persian::Counter.paragraph(text)).to eq(after)
   end
 
   it 'shoud count uniq characters' do
     text = 'دوستت دارم'
     size = 8
 
-    expect(Persian::Counter.uniq_char_counter(text)).to eq(size)
+    expect(Persian::Counter.uniq_character(text)).to eq(size)
   end
 end
