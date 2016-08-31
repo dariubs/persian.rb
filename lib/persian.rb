@@ -7,7 +7,8 @@ require 'persian/list/character'
 
 # classes
 require 'persian/number'
-require 'persian/text'
+require 'persian/text/text'
+require 'persian/text/keyboard'
 require 'persian/num_text'
 require 'persian/date'
 require 'persian/tokenizer'
