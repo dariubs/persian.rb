@@ -18,6 +18,5 @@ module Persian
       EN_FA_KEYBOARD_CHAR.each { |v, k| text.gsub!(k, v) }
       text
     end
-
   end
 end
