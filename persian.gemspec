@@ -19,7 +19,7 @@ Gem::Specification.new do |s|
     `git ls-files -- bin/*`.split("\n").map { |f| File.basename(f) }
   s.require_paths = ['lib']
   s.homepage      =
-    'http://github.com/goonia/persian'
+    'http://github.com/negah/persian'
   s.license       = 'MIT'
 
   s.add_development_dependency 'rspec', '~> 3.4.0'

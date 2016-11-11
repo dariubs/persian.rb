@@ -3,8 +3,8 @@
          height="130" alt="Persian">
 </p>
 <p align="center">
-    <a href="https://travis-ci.org/goonia/persian">
-        <img src="https://travis-ci.org/goonia/persian.svg?branch=master"
+    <a href="https://travis-ci.org/negah/persian">
+        <img src="https://travis-ci.org/negah/persian.svg?branch=master"
              alt="Build Status">
     </a>
     <a href="https://rubygems.org/gems/persian">
@@ -18,7 +18,7 @@
     </a>
 
     <a href="https://codeclimate.com/github/goonia/persian">
-        <img src="https://codeclimate.com/github/goonia/persian/badges/gpa.svg"
+        <img src="https://codeclimate.com/github/negah/persian/badges/gpa.svg"
              alt="Code Climate">
     </a>
 </p>
@@ -33,24 +33,14 @@ gem install persian
 ```
 
 Usage
------------------------
+-----
 ```ruby
 require 'persian'
-
-Persian.number(1000) # output: ۱۰۰۰
-Persian.number("روبی در سال 1993 توسط متز معرفی شد.") # output: "روبی در سال ۱۹۹۳ توسط متز معرفی شد."
-
-Persian.number("۱۰۰۰", { lang: "en" }) # output: "1000"
-Persian.number("12345", { lang: "ar"}) # output: "١٢٣٤٥"
-Persian.number("۱۰۰۰", { lang: "en", return: "int" }) # output: 1000
-
-Persian.character("ملوك") # output: "ملوک"
-
-Persian.num_to_char 12345 # output : "دوازده هزار و سیصد و چهل و پنج"
-Persian.num_to_char "۲۰۴۸۲۰۴۸۲۰۴۸" # output: "دویست و چهار میلیارد و هشتصد و بیست میلیون و چهارصد و هشتاد و دو هزار و چهل و هشت"
-
-
 ```
+
+Components
+----------
+incomplete.
 
 License
 -------

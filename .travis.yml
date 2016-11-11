@@ -3,7 +3,6 @@ rvm:
   - 2.2.5
   - 2.3.1
   - ruby-head
-  - rbx-2
 
 script:
   rake test
