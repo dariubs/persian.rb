@@ -7,7 +7,7 @@ module Persian
     # Basic persian word tokenizer
     # Return an array of words
     def self.tokenize(text)
-      symbols = ['!', '﷼', ':', '؛', '؟', '،', '-']
+      symbols = ['!', '﷼', ':', '؛', '؟', '،', '-', '.']
       pair_pre = ['(', '{', '«', '<', '[']
       pair_post = [')', '}', '»', '>', ']']
       prepost = ["'", '"']
