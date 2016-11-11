@@ -17,7 +17,7 @@
              alt="Ruby Gems downloads">
     </a>
 
-    <a href="https://codeclimate.com/github/goonia/persian">
+    <a href="https://codeclimate.com/github/persian/persian">
         <img src="https://codeclimate.com/github/negah/persian/badges/gpa.svg"
              alt="Code Climate">
     </a>

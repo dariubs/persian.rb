@@ -73,4 +73,11 @@ describe 'persian counter methods' do
 
     expect(Persian::Counter.uniq_character(text)).to eq(size)
   end
+
+  it 'shoud return length of text' do
+    text = 'راهی بزن که آهی بر ساز آن توان زد'
+    size = 33
+
+    expect(Persian::Counter.character_counter(text)).to eq(size)
+  end
 end
