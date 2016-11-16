@@ -21,6 +21,12 @@ describe 'persian character methods' do
     expect(Persian::Text.remove_harekats(before)).to eq(after)
   end
 
+  it 'should remove all brackets from text' do
+    before = 'سلام من به «تو»'
+    after = 'سلام من به تو'
+    expect(Persian::Text.remove_brackets(before)).to eq(after)
+  end
+
   it 'should replace [ & ], { & }, ( & ), " & " with « & »' do
     before_first = 'اگر اراده ای نباشد عشقی نیست. "گاندی"'
     after_first = 'اگر اراده ای نباشد عشقی نیست. «گاندی»'

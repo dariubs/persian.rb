@@ -24,6 +24,12 @@ module Persian
       text
     end
 
+    # Remove All barckets
+    def self.remove_brackets(text)
+      BRACKETS.each { |v| text.gsub!(v, '') }
+      text
+    end
+
     # Replace general brackets with one type brackets
     # Default: 	0xAB & 	0xBB
     def self.general_brackets(text, left = '«', right = '»')

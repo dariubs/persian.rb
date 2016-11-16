@@ -31,6 +31,17 @@ module Persian
       TASHDID # Tashdid
     ].freeze
 
+    BRACKETS = [
+      '[',
+      ']',
+      '{',
+      '}',
+      '<',
+      '>',
+      '«',
+      '»'
+    ].freeze
+
     END_VOWEL = [
       HE_DOCHESHM,
       ALEF,
@@ -111,16 +122,16 @@ module Persian
       '?' => '؟',
       # Numbers without shift key
       '`' => '‍',
-      '1' => '۱',
-      '2' => '۲',
-      '3' => '۳',
-      '4' => '۴',
-      '5' => '۵',
-      '6' => '۶',
-      '7' => '۷',
-      '8' => '۸',
-      '9' => '۹',
-      '0' => '۰',
+      '1' => YEK,
+      '2' => DOW,
+      '3' => SE,
+      '4' => CHAHAR,
+      '5' => PANJ,
+      '6' => SHESH,
+      '7' => HAFT,
+      '8' => HASHT,
+      '9' => NOH,
+      '0' => SEFR,
       '-' => '-',
       '=' => '=',
       # Numbers With Shift key
