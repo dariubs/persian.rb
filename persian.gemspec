@@ -8,8 +8,8 @@ require 'persian/version'
 Gem::Specification.new do |s|
   s.name        = 'persian'
   s.version     = Persian::VERSION
-  s.date        = '2016-06-07'
-  s.summary     = 'A set of utilities for Persian language.'
+  s.date        = '2016-11-16'
+  s.summary     = 'Persian language for ruby.'
   s.description = 'A set of utilities for Persian language.'
   s.authors     = ['Dariush Abbasi']
   s.email       = 'poshtehani@gmail.com'
@@ -22,5 +22,5 @@ Gem::Specification.new do |s|
     'http://github.com/negah/persian'
   s.license       = 'MIT'
 
-  s.add_development_dependency 'rspec', '~> 3.4.0'
+  s.add_development_dependency 'rspec', '3.4'
 end
