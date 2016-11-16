@@ -30,6 +30,12 @@ module Persian
       text
     end
 
+    # Remove Persian signs
+    def self.remove_signs(text, with = '')
+      SIGNS.each { |v| text.gsub!(v, with) }
+      text
+    end
+
     # Replace general brackets with one type brackets
     # Default: 	0xAB & 	0xBB
     def self.general_brackets(text, left = '«', right = '»')

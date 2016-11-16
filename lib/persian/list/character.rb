@@ -42,6 +42,46 @@ module Persian
       '»'
     ].freeze
 
+    SIGNS = [
+      '!',
+      '@',
+      '#',
+      '$',
+      '%',
+      '&',
+      '*',
+      '~',
+      '`',
+      '\'',
+      '"',
+      ':',
+      ';',
+      '.',
+      '?',
+      '<',
+      '>',
+      '/',
+      '-',
+      '+',
+      '-',
+      '_',
+      '^',
+      MAD,
+      NOGHTE,
+      VIRGOOL,
+      NOGHTEVIRGOOL,
+      DONOGHTE,
+      TAAJOB,
+      SOAL,
+      BEALAVE,
+      DARSAD,
+      MENHA,
+      MOSAVI,
+      TAGHSIM,
+      ZARBDAR,
+      KESH
+    ].freeze
+
     END_VOWEL = [
       HE_DOCHESHM,
       ALEF,
