@@ -4,6 +4,7 @@
 require 'persian/list/alphabet'
 require 'persian/list/number'
 require 'persian/list/character'
+require 'persian/list/homonyms'
 
 # classes
 require 'persian/number'
