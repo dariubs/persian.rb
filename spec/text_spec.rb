@@ -233,4 +233,11 @@ describe 'persian character methods' do
     after = 'سلام. اسپیس کو؟'
     expect(Persian::Text.space_after_dot(text)).to eq(after)
   end
+
+  it 'should remove all repeated characters from text' do
+    text = 'سلااااااام.چی میکنییی؟؟؟؟؟'
+    after = 'سلام.چی میکنی؟'
+
+    expect(Persian::Text.squeeze(text)).to eq(after)
+  end
 end

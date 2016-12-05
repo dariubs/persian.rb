@@ -193,5 +193,9 @@ module Persian
       text.gsub!(/(\.)(\S)/, '\1 \2')
       text
     end
+
+    def self.squeeze(text)
+      text.squeeze
+    end
   end
 end
