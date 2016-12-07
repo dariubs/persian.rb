@@ -33,6 +33,13 @@ describe 'persian character methods' do
     expect(Persian::Text.remove_signs(before)).to eq(after)
   end
 
+  it 'should replace all zwnjs with space ' do
+    before = 'من‌در‌نیم‌فاصله‌ات‌اسیرم'
+    after = 'من در نیم فاصله ات اسیرم'
+
+    expect(Persian::Text.replace_zwnj_with_space(before)).to eq(after)
+  end
+
   it 'should replace [ & ], { & }, ( & ), " & " with « & »' do
     before_first = 'اگر اراده ای نباشد عشقی نیست. "گاندی"'
     after_first = 'اگر اراده ای نباشد عشقی نیست. «گاندی»'

@@ -36,6 +36,11 @@ module Persian
       text
     end
 
+    def self.replace_zwnj_with_space(text)
+      text.gsub!(/(‌)/, ' ')
+      text
+    end
+
     # Replace general brackets with one type brackets
     # Default: 	0xAB & 	0xBB
     def self.general_brackets(text, left = '«', right = '»')
