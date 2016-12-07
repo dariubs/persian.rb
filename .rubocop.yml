@@ -27,3 +27,6 @@ Style/AsciiComments:
 
 Style/MethodMissing:
   Enabled: false
+
+Style/ConstantName:
+  Enabled: false
