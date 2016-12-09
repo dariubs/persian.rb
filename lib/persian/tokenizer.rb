@@ -32,6 +32,20 @@ module Persian
       tokens.flatten
     end
 
+    def self.tokenize_more(text, num)
+      list = tokenize(text)
+      tokens = []
+      0.upto list.size - num do |i|
+        token = ''
+        0.upto num - 1 do |j|
+          token += list[i + j] + ' '
+        end
+        tokens.push token.strip
+      end
+
+      tokens
+    end
+
     # Split paragraphs
     # Return an array of paragraphs
     def self.split_paragraphs(text)

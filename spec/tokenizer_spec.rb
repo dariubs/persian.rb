@@ -10,6 +10,14 @@ describe 'persian tokenizers' do
     expect(Persian::Tokenizer.tokenize(before)).to eq(after)
   end
 
+  it 'should tokenize as a serie' do
+    text = 'سلام من به تو یار قدیمی'
+    parts = 3
+    result = ['سلام من به', 'من به تو', 'به تو یار', 'تو یار قدیمی']
+
+    expect(Persian::Tokenizer.tokenize_more(text, parts)).to eq(result)
+  end
+
   it 'should split paragraphs' do
     text = "
 یوهانس برامس در سال ۱۸۳۳ در شهر هامبورگ آلمان در خانواده‌ای فقیر به دنیا آمد. تحصیلات ابتدایی موسیقی را نزد پدرش که نوازنده کنترباس بود فرا گرفت.
