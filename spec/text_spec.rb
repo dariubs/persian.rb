@@ -247,4 +247,12 @@ describe 'persian character methods' do
 
     expect(Persian::Text.squeeze(text)).to eq(after)
   end
+
+  it 'should remove text postfix' do
+    text = 'پسره'
+    postfix = 'ه'
+    result = 'پسر'
+
+    expect(Persian::Text.remove_postfix(text, postfix)).to eq(result)
+  end
 end

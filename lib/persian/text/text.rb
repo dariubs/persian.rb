@@ -32,6 +32,7 @@ module Persian
 
     # Remove Persian signs
     def self.remove_signs(text, with = '')
+      return '' if text.nil?
       SIGNS.each { |v| text.gsub!(v, with) }
       text
     end
@@ -201,6 +202,13 @@ module Persian
 
     def self.squeeze(text)
       text.squeeze
+    end
+
+    # Remove specific character from end of text
+    # EXample: remove_postfix('پسره','ه')
+    def self.remove_postfix(text, postfix)
+      text.chomp!(postfix)
+      text
     end
   end
 end
