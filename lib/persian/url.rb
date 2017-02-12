@@ -10,7 +10,7 @@ module Persian
       # remove harekats
       text = Text.remove_harekats(text)
       # remove slash and backslash
-      text.gsub!(%r{(\/||\\)}, '')
+      text = text.gsub(%r{(\/||\\)}, '')
       # remove signs
       text = Text.remove_signs(text, ' ')
       # Remove extra spaces
@@ -18,7 +18,7 @@ module Persian
       # trim spaces from start and end of text
       text = text.strip
       # replace space with dash
-      text.gsub!(/\s/, '-')
+      text = text.gsub(/\s/, '-')
       text
     end
   end

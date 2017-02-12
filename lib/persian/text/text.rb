@@ -20,35 +20,35 @@ module Persian
 
     # Remove Arabic harecats from text
     def self.remove_harekats(text)
-      HAREKATS.each { |v| text.gsub!(v, '') }
+      HAREKATS.each { |v| text = text.gsub(v, '') }
       text
     end
 
     # Remove All barckets
     def self.remove_brackets(text)
-      BRACKETS.each { |v| text.gsub!(v, '') }
+      BRACKETS.each { |v| text = text.gsub(v, '') }
       text
     end
 
     # Remove Persian signs
     def self.remove_signs(text, with = '')
       return '' if text.nil?
-      SIGNS.each { |v| text.gsub!(v, with) }
+      SIGNS.each { |v| text = text.gsub(v, with) }
       text
     end
 
     def self.replace_zwnj_with_space(text)
-      text.gsub!(/(‌)/, ' ')
+      text = text.gsub(/(‌)/, ' ')
       text
     end
 
     # Replace general brackets with one type brackets
     # Default: 	0xAB & 	0xBB
     def self.general_brackets(text, left = '«', right = '»')
-      text.gsub!(/"(.*?)"/, left + '\1' + right)
-      text.gsub!(/\[(.*?)\]/, left + '\1' + right)
-      text.gsub!(/\{(.*?)\}/, left + '\1' + right)
-      text.gsub!(/\((.*?)\)/, left + '\1' + right)
+      text = text.gsub(/"(.*?)"/, left + '\1' + right)
+      text = text.gsub(/\[(.*?)\]/, left + '\1' + right)
+      text = text.gsub(/\{(.*?)\}/, left + '\1' + right)
+      text = text.gsub(/\((.*?)\)/, left + '\1' + right)
       text
     end
 
