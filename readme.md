@@ -3,10 +3,9 @@
          height="130" alt="Persian ruby gem">
 </p>
 
-<a href="https://travis-ci.org/dariubs/persian.rb">
-    <img src="https://travis-ci.org/dariubs/persian.rb.svg?branch=master"
-            alt="Build Status">
-</a>
+# Persian Ruby Gem
+
+
 
 <a href="https://rubygems.org/gems/persian">
     <img src="https://img.shields.io/badge/gem-persian-orange.svg"
@@ -18,12 +17,7 @@
             alt="Ruby Gems downloads">
 </a>
 
-<a href="https://codeclimate.com/github/dariubs/persian.rb">
-    <img src="https://codeclimate.com/github/dariubs/persian.rb/badges/gpa.svg"
-            alt="Code Climate">
-</a>
-
-<p align="center"><sup><strong> Ruby gem for working with Persian text. </strong></sup></p>
+<p><sup><strong> Ruby gem for digesting Persian text. </strong></sup></p>
 
 
 
