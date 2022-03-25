@@ -8,7 +8,7 @@ require 'persian/version'
 Gem::Specification.new do |s|
   s.name        = 'persian'
   s.version     = Persian::VERSION
-  s.date        = '2016-11-16'
+  s.date        = '2022-03-25'
   s.summary     = 'Persian language for ruby.'
   s.description = 'A set of utilities for Persian language.'
   s.authors     = ['Dariush Abbasi']
@@ -19,7 +19,7 @@ Gem::Specification.new do |s|
     `git ls-files -- bin/*`.split("\n").map { |f| File.basename(f) }
   s.require_paths = ['lib']
   s.homepage      =
-    'http://github.com/negah/persian'
+    'http://github.com/dariubs/persian.rb'
   s.license       = 'MIT'
 
   s.add_development_dependency 'rspec', '3.4'
